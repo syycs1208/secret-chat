@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket 示例</title>
+</head>
+
+<body>
+    <button id="connectButton">连接到服务器</button>
+    <button id="sendButton" disabled>发送消息</button>
+    <input type="text" id="messageInput" placeholder="输入消息" disabled>
+    <div id="messages"></div>
+
+    <script>
+        const connectButton = document.getElementById('connectButton');
+        const sendButton = document.getElementById('sendButton');
+        const messageInput = document.getElementById('messageInput');
+        const messagesDiv = document.getElementById('messages');
+
+        let socket;
+
+        connectButton.addEventListener('click', function() {
+            if ("WebSocket" in window) {
+                socket = new WebSocket("ws://example.com/socket");
+
+                socket.onopen = function(event) {
+                    console.log("WebSocket 连接已建立");
+                    connectButton.disabled = true;
+                    sendButton.disabled = false;
+                    messageInput.disabled = false;
+                    appendMessage("已连接到服务器");
+                };
+
+                socket.onmessage = function(event) {
+                    const message = event.data;
+                    appendMessage("服务器: " + message);
+                };
+
+                socket.onclose = function(event) {
+                    console.log("WebSocket 连接已关闭");
+                    connectButton.disabled = false;
+                    sendButton.disabled = true;
+                    messageInput.disabled = true;
+                    appendMessage("与服务器的连接已关闭");
+                };
+
+                socket.onerror = function(event) {
+                    console.error("WebSocket 连接发生错误");
+                    appendMessage("连接发生错误");
+                };
+            } else {
+                alert("您的浏览器不支持 WebSocket，请使用现代浏览器访问。");
+            }
+        });
+
+        sendButton.addEventListener('click', function() {
+            const message = messageInput.value;
+            if (message) {
+                socket.send(message);
+                appendMessage("你: " + message);
+                messageInput.value = '';
+            }
+        });
+
+        function appendMessage(message) {
+            const p = document.createElement('p');
+            p.textContent = message;
+            messagesDiv.appendChild(p);
+        }
+    </script>
+</body>
+
+</html>    

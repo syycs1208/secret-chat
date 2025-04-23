@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a474377b-6583-4ce6-9104-2c1e0f27697d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/secret-chat-front/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-front/src/main/resources/public/rsa_secret.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-front/src/main/resources/public/rsa_sign.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-front/src/main/resources/public/rsa_sign_v2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-front/src/main/resources/public/websocket_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-server/src/main/java/com/galaxy/secret/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-server/src/main/java/com/galaxy/secret/server/WebSocketServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-server/src/main/java/com/galaxy/secret/server/handler/WebSocketServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/galaxy/secret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/secret-chat-front/src/main/java/com/galaxy/secret/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/galaxy/secret/aes/AesCryptoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/secret-chat-server/src/main/java/com/galaxy/secret/aes/AesCryptoUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/galaxy/secret/aes/AesGenerateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/secret-chat-server/src/main/java/com/galaxy/secret/aes/AesGenerateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/galaxy/secret/rsa/RsaCryptoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/secret-chat-server/src/main/java/com/galaxy/secret/rsa/RsaCryptoUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/galaxy/secret/rsa/RsaGenerateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/secret-chat-server/src/main/java/com/galaxy/secret/rsa/RsaGenerateUtil.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\CSStudio\maven-lib\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2vaZMGn6NSpWIhHoXp4T5n6VoYa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/CSStudio/project/secret-chat/secret-chat-front/src/main/resources/public",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Git"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CSStudio\project\secret-chat\secret-chat-front\src\main\resources\public" />
+      <recent name="D:\CSStudio\project\secret-chat\secret-chat-server\src\main\java\com\galaxy\secret" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="secret-chat" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="secret-chat" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a474377b-6583-4ce6-9104-2c1e0f27697d" name="Changes" comment="" />
+      <created>1744385098901</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744385098901</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

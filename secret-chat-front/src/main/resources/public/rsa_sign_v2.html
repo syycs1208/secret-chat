@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA 加签验签工具（使用给定密钥）</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.3.2/jsencrypt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+<div class="bg-white p-8 rounded shadow-md w-96">
+    <h1 class="text-2xl font-bold mb-4">RSA 加签验签工具（使用给定密钥）</h1>
+    <div class="mb-4">
+        <label for="message" class="block text-sm font-medium text-gray-700">消息:</label>
+        <textarea id="message" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
+    </div>
+    <div class="mb-4">
+        <label for="publicKey" class="block text-sm font-medium text-gray-700">公钥:</label>
+        <textarea id="publicKey" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
+    </div>
+    <div class="mb-4">
+        <label for="privateKey" class="block text-sm font-medium text-gray-700">私钥:</label>
+        <textarea id="privateKey" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
+    </div>
+    <div class="mb-4">
+        <label for="signature" class="block text-sm font-medium text-gray-700">签名:</label>
+        <textarea id="signature" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" readonly></textarea>
+    </div>
+    <div class="mb-4">
+        <label for="verifyResult" class="block text-sm font-medium text-gray-700">验签结果:</label>
+        <input type="text" id="verifyResult" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" readonly>
+    </div>
+    <div class="flex justify-between">
+        <button id="signButton" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">签名</button>
+        <button id="verifyButton" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">验签</button>
+    </div>
+</div>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const messageInput = document.getElementById('message');
+            const publicKeyInput = document.getElementById('publicKey');
+            const privateKeyInput = document.getElementById('privateKey');
+            const signatureOutput = document.getElementById('signature');
+            const verifyResultOutput = document.getElementById('verifyResult');
+            const signButton = document.getElementById('signButton');
+            const verifyButton = document.getElementById('verifyButton');
+
+            signButton.addEventListener('click', function () {
+                const message = messageInput.value;
+                const privateKey = privateKeyInput.value;
+                if (message && privateKey) {
+                    const encrypt = new JSEncrypt();
+                    encrypt.setPrivateKey(privateKey);
+                    const signature = encrypt.sign(message, CryptoJS.SHA256, 'sha256');
+                    signatureOutput.value = signature;
+                }
+            });
+
+            verifyButton.addEventListener('click', function () {
+                const message = messageInput.value;
+                const publicKey = publicKeyInput.value;
+                const signature = signatureOutput.value;
+                if (message && publicKey && signature) {
+                    const encrypt = new JSEncrypt();
+                    encrypt.setPublicKey(publicKey);
+                    const isVerified = encrypt.verify(message, signature, CryptoJS.SHA256);
+                    verifyResultOutput.value = isVerified ? '验签成功' : '验签失败';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
