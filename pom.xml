@@ -7,6 +7,12 @@
     <groupId>com.galaxy.secret</groupId>
     <artifactId>secret-chat</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>secret-chat-common</module>
+        <module>secret-chat-client</module>
+        <module>secret-chat-server</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -14,14 +20,33 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
+    <dependencyManagement>
+        <dependencies>
 
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>4.1.60.Final</version>
-        </dependency>
-    </dependencies>
+            <dependency>
+                <groupId>com.galaxy.secret</groupId>
+                <artifactId>secret-chat-common</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.galaxy.secret</groupId>
+                <artifactId>secret-chat-client</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.galaxy.secret</groupId>
+                <artifactId>secret-chat-server</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>4.1.60.Final</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

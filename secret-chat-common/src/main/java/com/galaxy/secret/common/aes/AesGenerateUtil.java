@@ -1,4 +1,4 @@
-package com.galaxy.secret.aes;
+package com.galaxy.secret.common.aes;
 
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
