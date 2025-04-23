@@ -5,22 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a474377b-6583-4ce6-9104-2c1e0f27697d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/secret-chat-client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/secret-chat-client/src/main/java/com/galaxy/secret/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/secret-chat-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/secret-chat-common/src/main/java/com/galaxy/secret/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/secret-chat-common/src/main/java/com/galaxy/secret/common/decoder/MessageDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/secret-chat-common/src/main/java/com/galaxy/secret/common/encoder/MessageEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/secret-chat-common/src/main/java/com/galaxy/secret/common/util/ByteUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/secret-chat-common/src/main/java/com/galaxy/secret/model/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/secret-chat-common/src/main/java/com/galaxy/secret/model/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/secret-chat-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/galaxy/secret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/secret-chat-server/src/main/java/com/galaxy/secret/server/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/galaxy/secret/aes/AesCryptoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/secret-chat-common/src/main/java/com/galaxy/secret/common/aes/AesCryptoUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/galaxy/secret/aes/AesGenerateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/secret-chat-common/src/main/java/com/galaxy/secret/common/aes/AesGenerateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/galaxy/secret/rsa/RsaCryptoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/secret-chat-common/src/main/java/com/galaxy/secret/common/rsa/RsaCryptoUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/galaxy/secret/rsa/RsaGenerateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/secret-chat-common/src/main/java/com/galaxy/secret/common/rsa/RsaGenerateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-client/src/main/java/com/galaxy/secret/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-client/src/main/java/com/galaxy/secret/boot/ClientBoot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-client/src/main/java/com/galaxy/secret/boot/ClientChannelDuplexHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-client/src/main/java/com/galaxy/secret/boot/ClientHandlerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-server/src/main/java/com/galaxy/secret/server/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-server/src/main/java/com/galaxy/secret/server/boot/NettyBoot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-server/src/main/java/com/galaxy/secret/server/boot/ServerChannelDuplexHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret-chat-server/src/main/java/com/galaxy/secret/server/boot/ServerHandlerInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secret-chat-client/src/main/java/com/galaxy/secret/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,13 +78,27 @@
       <recent name="D:\CSStudio\project\secret-chat\secret-chat-server\src\main\java\com\galaxy\secret" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.galaxy.secret.boot" />
+      <recent name="com.galaxy.secret" />
+      <recent name="com.galaxy.secret.server.boot" />
       <recent name="com.galaxy.secret.common.util" />
       <recent name="com.galaxy.secret.common.encoder" />
-      <recent name="com.galaxy.secret.common.decoder" />
-      <recent name="com.galaxy.secret.server" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.galaxy.secret.Main">
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.galaxy.secret.server.Application" />
+      <module name="secret-chat-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.galaxy.secret.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.galaxy.secret.server.Main" />
       <module name="secret-chat-server" />
@@ -109,7 +117,20 @@
       <module name="secret-chat-common" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.galaxy.secret.*" />
+          <option name="PATTERN" value="com.galaxy.secret.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.galaxy.secret.client.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.galaxy.secret.client.Application" />
+      <module name="secret-chat-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.galaxy.secret.client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,6 +153,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.com.galaxy.secret.client.Application" />
         <item itemvalue="Application.com.galaxy.secret.Main" />
         <item itemvalue="Application.Main" />
       </list>
@@ -164,5 +187,36 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/secret-chat-common/src/main/java/com/galaxy/secret/common/encoder/MessageEncoder.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/secret-chat-common/src/main/java/com/galaxy/secret/common/encoder/MessageEncoder.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/secret-chat-client/src/main/java/com/galaxy/secret/Application.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/secret-chat-client/src/main/java/com/galaxy/secret/Application.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/secret-chat-client/src/main/java/com/galaxy/secret/Application.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
